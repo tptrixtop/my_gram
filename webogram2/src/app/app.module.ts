@@ -10,6 +10,15 @@ import {
 import {AppRoutingModule, appRouterComponents} from './app.routing.module';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from '@angular/common/http';
+
+let ng_material_modules = [
+    MdMenuModule, MdToolbarModule, MdGridListModule, MdButtonModule,
+    AppRoutingModule,BrowserModule,MdMenuModule,MdToolbarModule,MdGridListModule,
+    MdButtonModule,FormsModule,MdDialogModule,NoopAnimationsModule,MdNativeDateModule,
+    ReactiveFormsModule,MdInputModule,MdSelectModule,MdCheckboxModule,MdCardModule,
+    MdTableModule
+];
 
 @NgModule({
     declarations: [
@@ -18,24 +27,8 @@ import {NoopAnimationsModule} from "@angular/platform-browser/animations";
     ],
     imports: [
         BrowserModule,
-        MdMenuModule, MdToolbarModule, MdGridListModule, MdButtonModule,
-        AppRoutingModule,
-        BrowserModule,
-        MdMenuModule,
-        MdToolbarModule,
-        MdGridListModule,
-        MdButtonModule,
-        FormsModule,
-        MdDialogModule,
-        NoopAnimationsModule,
-        MdNativeDateModule,
-        ReactiveFormsModule,
-        MdInputModule,
-        MdSelectModule,
-        MdCheckboxModule,
-        MdCardModule,
-        MdTableModule
-
+        ng_material_modules,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
