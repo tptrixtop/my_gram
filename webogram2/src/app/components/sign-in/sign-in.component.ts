@@ -13,7 +13,7 @@ export class SignInComponent implements OnInit {
 
     ngOnInit() {
 
-        this.http.get('/api/items').subscribe(data => {
+        this.http.get('/api/get-country-list').subscribe(data => {
             console.log(data);
         });
 
