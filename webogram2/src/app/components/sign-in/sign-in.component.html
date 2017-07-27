@@ -3,21 +3,31 @@
     <br>
     Please choose your country and enter your full phone number.
 </p>
-<form class="example-form">
-
+<form>
     <table class="example-full-width" cellspacing="0">
+        <!-- use this for get list of countries and codes
+         https://restcountries.eu/rest/v2/
+         API list
+         https://restcountries.eu/#api-endpoints-list-of-codes
+         -->
         <tr>
-            <td>
-                <md-input-container class="example-full-width">
-                    <input mdInput placeholder="First name">
+            <td colspan="3">
+                <md-input-container class="full-width">
+                    <input mdInput placeholder="Country">
+                </md-input-container>
+            </td>
+        </tr>
+        <tr>
+            <td width="80">
+                <md-input-container class="full-width">
+                    <input mdInput placeholder="Code">
                 </md-input-container>
             </td>
             <td>
-                <md-input-container class="example-full-width">
-                    <input mdInput placeholder="Long Last Name That Will Be Truncated">
+                <md-input-container class="full-width">
+                    <input mdInput placeholder="Phone number">
                 </md-input-container>
             </td>
         </tr>
     </table>
-
 </form>
