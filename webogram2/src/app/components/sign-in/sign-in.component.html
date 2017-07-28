@@ -5,27 +5,24 @@
 </p>
 <form>
     <table class="example-full-width" cellspacing="0">
-        <!-- use this for get list of countries and codes
-         https://restcountries.eu/rest/v2/
-         API list
-         https://restcountries.eu/#api-endpoints-list-of-codes
-         -->
         <tr>
-            <td colspan="3">
+            <td colspan="3" (click)="selectCountry()" class="select-country">
+
                 <md-input-container class="full-width">
-                    <input mdInput placeholder="Country">
+                    <input mdInput placeholder="Country" class="select-country" name="country_name" [(ngModel)]="country_name">
                 </md-input-container>
+
             </td>
         </tr>
         <tr>
             <td width="80">
                 <md-input-container class="full-width">
-                    <input mdInput placeholder="Code">
+                    <input mdInput placeholder="Code" name="code" [(ngModel)]="country_code">
                 </md-input-container>
             </td>
             <td>
                 <md-input-container class="full-width">
-                    <input mdInput placeholder="Phone number">
+                    <input mdInput placeholder="Phone number" name="phone_number" [(ngModel)]="phone_number">
                 </md-input-container>
             </td>
         </tr>

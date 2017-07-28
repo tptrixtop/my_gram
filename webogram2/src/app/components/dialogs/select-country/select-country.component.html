@@ -1,0 +1,26 @@
+<md-grid-tile-header>
+    <md-toolbar color="primary">
+        <span>Country</span>
+    </md-toolbar>
+</md-grid-tile-header>
+<div class="country-block">
+    <div class="country-content">
+        <div class="content">
+
+            <div class="country-search-input">
+                <md-input-container class="full-width">
+                    <input #search_input mdInput placeholder="Search">
+                </md-input-container>
+            </div>
+
+            <ul class="country-list">
+                <li *ngFor="let country of country_list | SearchPipe : search_input.value">
+                    <a (click)="selectCountry(country)">
+                        <span class="country-name">{{ country.name }}</span>
+                        <span class="country-phone-code">+{{ country.callingCodes[0] }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

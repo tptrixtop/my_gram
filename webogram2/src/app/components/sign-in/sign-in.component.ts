@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {MdDialog} from "@angular/material";
+import {SelectCountryComponent} from "../dialogs/select-country/select-country.component";
 
 @Component({
     selector: 'app-sign-in',
@@ -8,15 +9,27 @@ import {HttpClient} from "@angular/common/http";
 })
 export class SignInComponent implements OnInit {
 
-    constructor(private http: HttpClient) {
+    public country_code: string = '';
+    public country_name: string = '';
+    public phone_number: string = '';
+
+    constructor(public dialog: MdDialog) {
     }
 
     ngOnInit() {
 
-        this.http.get('/api/get-country-list').subscribe(data => {
-            console.log(data);
-        });
+    }
 
+    selectCountry() {
+
+        let ref = this.dialog
+            .open(SelectCountryComponent, {
+                width: '450px'
+            })
+            .componentInstance.select_country.subscribe(country => {
+                this.country_name = country.name;
+                this.country_code = '+' + country.callingCodes[0];
+            });
 
     }
 

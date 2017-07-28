@@ -4,3 +4,53 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.mat-dialog-container {
+    padding: 0 !important;
+}
+
+.my-spacer {
+    flex: 1 1 auto;
+}
+
+.country-block {
+    height: 300px;
+}
+
+.country-block > .country-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.country-content > .content {
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+ul.country-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0px;
+}
+
+.country-content > .content > .country-search-input, ul.country-list > li > a {
+    display: block;
+    padding: 10px 25px 10px 25px;
+}
+
+ul.country-list > li:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+ul.country-list > li > a > .country-phone-code {
+    float: right;
+    color: gray;
+}
+
+.full-width {
+    width: 100%;
+}

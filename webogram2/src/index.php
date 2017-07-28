@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Web Telegram2 <i>(Unofficial)</i></title>
+    <title>Web Telegram2 (Unofficial)</title>
     <base href="/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">

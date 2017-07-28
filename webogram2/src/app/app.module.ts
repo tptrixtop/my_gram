@@ -11,6 +11,8 @@ import {AppRoutingModule, appRouterComponents} from './app.routing.module';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from '@angular/common/http';
+import { SelectCountryComponent } from './components/dialogs/select-country/select-country.component';
+import {SearchPipe} from "./components/dialogs/select-country/search.pipe";
 
 let ng_material_modules = [
     MdMenuModule, MdToolbarModule, MdGridListModule, MdButtonModule,
@@ -23,7 +25,9 @@ let ng_material_modules = [
 @NgModule({
     declarations: [
         AppComponent,
-        appRouterComponents
+        appRouterComponents,
+        SelectCountryComponent,
+        SearchPipe
     ],
     imports: [
         BrowserModule,
@@ -31,7 +35,10 @@ let ng_material_modules = [
         HttpClientModule
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [
+        SelectCountryComponent
+    ]
 })
 export class AppModule {
 }
