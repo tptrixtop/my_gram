@@ -11,7 +11,8 @@
         "assets",
         "favicon.ico",
         "web.config",
-        "api.php"
+		  "api.php",
+		  ".htaccess"
       ],
       "index": "index.php",
       "main": "main.ts",
