@@ -1,3 +1,6 @@
 :host .select-country {
     cursor: pointer;
 }
+:host .code-input {
+    text-align: center;
+}

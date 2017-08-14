@@ -11,8 +11,9 @@ import {AppRoutingModule, appRouterComponents} from './app.routing.module';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from '@angular/common/http';
-import { SelectCountryComponent } from './components/dialogs/select-country/select-country.component';
+import {SelectCountryComponent} from './components/dialogs/select-country/select-country.component';
 import {SearchPipe} from "./components/dialogs/select-country/search.pipe";
+import {AddPlusPipe} from "./components/sign-in/add-plus.pipe";
 
 let ng_material_modules = [
     MdMenuModule, MdToolbarModule, MdGridListModule, MdButtonModule,
@@ -22,12 +23,14 @@ let ng_material_modules = [
     MdTableModule
 ];
 
+
 @NgModule({
     declarations: [
         AppComponent,
         appRouterComponents,
         SelectCountryComponent,
-        SearchPipe
+        SearchPipe,
+        AddPlusPipe
     ],
     imports: [
         BrowserModule,

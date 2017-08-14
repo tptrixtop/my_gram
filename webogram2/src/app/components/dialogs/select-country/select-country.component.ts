@@ -1,6 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
 import {MdDialogRef} from "@angular/material";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'app-select-country',
@@ -10,17 +9,12 @@ import {HttpClient} from "@angular/common/http";
 export class SelectCountryComponent implements OnInit {
 
     public country_list: Array<any> = [];
-
     @Output('select_country') select_country: EventEmitter<any> = new EventEmitter();
 
-    constructor(public dialogRef: MdDialogRef<SelectCountryComponent>,
-                private http: HttpClient) {
+    constructor(public dialogRef: MdDialogRef<SelectCountryComponent>) {
     }
 
     ngOnInit() {
-        this.http.get<Array<any>>('/api/get-country-list').subscribe(data => {
-            this.country_list = data;
-        });
     }
 
     selectCountry(country: Array<any>) {
