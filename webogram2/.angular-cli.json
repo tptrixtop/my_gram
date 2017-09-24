@@ -9,12 +9,9 @@
             "outDir": "../public",
             "assets": [
                 "assets",
-                "favicon.ico",
-                "web.config",
-		        "api.php",
-		        ".htaccess"
+                "favicon.ico"
             ],
-            "index": "index.php",
+            "index": "index.html",
             "main": "main.ts",
             "polyfills": "polyfills.ts",
             "test": "test.ts",
