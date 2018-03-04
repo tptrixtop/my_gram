@@ -16,9 +16,9 @@ import {SearchPipe} from "./components/dialogs/select-country/search.pipe";
 
 let ng_material_modules = [
     MdMenuModule, MdToolbarModule, MdGridListModule, MdButtonModule,
-    AppRoutingModule,BrowserModule,MdMenuModule,MdToolbarModule,MdGridListModule,
-    MdButtonModule,FormsModule,MdDialogModule,NoopAnimationsModule,MdNativeDateModule,
-    ReactiveFormsModule,MdInputModule,MdSelectModule,MdCheckboxModule,MdCardModule,
+    AppRoutingModule, BrowserModule, MdMenuModule, MdToolbarModule, MdGridListModule,
+    MdButtonModule, FormsModule, MdDialogModule, NoopAnimationsModule, MdNativeDateModule,
+    ReactiveFormsModule, MdInputModule, MdSelectModule, MdCheckboxModule, MdCardModule,
     MdTableModule
 ];
 
